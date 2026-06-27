@@ -1,0 +1,121 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+a,
+button,
+input,
+:focus-visible {
+  -webkit-tap-highlight-color: transparent;
+}
+
+:focus-visible {
+  outline: 2px solid #7f77dd;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer components {
+  .card {
+    background-color: #ffffff;
+    border: 0.5px solid #e5e7eb;
+    border-radius: 12px;
+  }
+
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 9999px;
+    padding: 0.125rem 0.625rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+  }
+
+  .badge-live {
+    background-color: #ecfdf3;
+    color: #1fa463;
+  }
+
+  .badge-private {
+    background-color: #f1f0fc;
+    color: #7f77dd;
+  }
+
+  .badge-mock {
+    background-color: #f3f4f6;
+    color: #6b7280;
+  }
+
+  .btn-primary {
+    background-color: #7f77dd;
+    color: #ffffff;
+    border-radius: 12px;
+    padding: 0.625rem 1.25rem;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 100ms ease-out, transform 100ms ease-out;
+  }
+
+  .btn-primary:hover {
+    background-color: #6d64d4;
+  }
+
+  .btn-primary:active {
+    transform: translateY(1px);
+  }
+
+  .btn-primary:disabled {
+    background-color: #c9c5f0;
+    cursor: not-allowed;
+    transform: none;
+  }
+
+  .input {
+    border: 0.5px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.875rem;
+    outline: none;
+    width: 100%;
+    transition: border-color 150ms ease-out;
+  }
+
+  .input:focus {
+    border-color: #7f77dd;
+  }
+
+  .input:disabled {
+    background-color: #f9fafb;
+    color: #9ca3af;
+  }
+}

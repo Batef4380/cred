@@ -1,0 +1,14 @@
+{
+  "chainId": 10143,
+  "deployer": "0xbfC5D32703480b4BB539f234bAD08FD36A16e08D",
+  "identityRegistry": "0xf5b44d8F53e8987568EAdA9d5642ea7C97D616af",
+  "roomFactory": "0x8ab4A7259f31bc8C6670A87Fb9D9055C5Ec8D4e6",
+  "rooms": {
+    "monadBlitz": {
+      "name": "Monad Blitz",
+      "symbol": "BLITZ",
+      "room": "0x38aA18BDbD23C6e55243F4B2bCE46e6482Cd923b",
+      "token": "0x86C545dCE58AB887cA447e63A70617944C835B85"
+    }
+  }
+}
