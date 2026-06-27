@@ -2,6 +2,8 @@
 
 A room-based engagement economy built on top of X (Twitter). Each room has its own ERC-20 token. Users earn tokens by engaging with posts submitted to the room (like, comment, RT). They spend tokens to submit their own posts or boost others. Engagements are self-reported with a proof link, recorded on-chain. Built on **Monad Testnet**.
 
+**Live:** https://credmonad.vercel.app
+
 ## Live deployment (Monad Testnet, chainId 10143)
 
 | Contract | Address |
