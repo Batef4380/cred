@@ -1,8 +1,8 @@
 "use client";
 
 import { useMemo } from "react";
-import { useAccount, useReadContract, useReadContracts } from "wagmi";
-import { CONTRACTS, abis } from "@/lib/contracts";
+import { useAccount, useReadContracts } from "wagmi";
+import { abis } from "@/lib/contracts";
 
 export type Post = {
   id: bigint;
