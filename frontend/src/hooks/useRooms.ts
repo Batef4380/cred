@@ -2,7 +2,7 @@
 
 import { useMemo } from "react";
 import { useReadContract, useReadContracts } from "wagmi";
-import { CONTRACTS, abis } from "@/lib/contracts";
+import { CONTRACTS, ROOMS_VISIBLE_FROM_INDEX, abis } from "@/lib/contracts";
 
 export type OnChainRoom = {
   address: `0x${string}`;
@@ -23,7 +23,7 @@ export function useRoomAddresses() {
 
 export function useRooms() {
   const { data: roomAddresses, isLoading: isLoadingAddresses, refetch: refetchAddresses } = useRoomAddresses();
-  const addresses = (roomAddresses as `0x${string}`[] | undefined) ?? [];
+  const addresses = ((roomAddresses as `0x${string}`[] | undefined) ?? []).slice(ROOMS_VISIBLE_FROM_INDEX);
 
   const baseContracts = useMemo(
     () =>

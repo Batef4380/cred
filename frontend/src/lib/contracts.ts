@@ -10,6 +10,14 @@ export const CONTRACTS = {
   roomFactory: "0x8ab4A7259f31bc8C6670A87Fb9D9055C5Ec8D4e6" as const,
 };
 
+/**
+ * RoomFactory.getRooms() returns rooms in creation order. Everything created
+ * before this cutoff (testing/dev rooms) is hidden from the public list —
+ * only rooms created from here on show up. Bump this if you intentionally
+ * want to hide more later.
+ */
+export const ROOMS_VISIBLE_FROM_INDEX = 12;
+
 export const SEED_ROOMS = {
   monadBlitz: {
     name: "Monad Blitz",
